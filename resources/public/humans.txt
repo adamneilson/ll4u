@@ -1,0 +1,6 @@
+/* This site is built as a favour to a friend by Adam Neilson */
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: jQuery, Orbit, Reveal, Zurb Foundation
+  Software: Clojure, Git, Luminus
