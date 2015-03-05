@@ -1,4 +1,5 @@
 (ns ll4u.handler
+  (:gen-class)
   (:require [compojure.core :refer [defroutes]]
             [ll4u.routes.home :refer [home-routes]]
             [ll4u.middleware :refer [load-middleware]]
