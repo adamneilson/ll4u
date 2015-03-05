@@ -1,4 +1,4 @@
-body, h2, h3, p {
+body, h2, h3, p, button, a {
 	font-family: 'Open Sans', sans-serif;
 }
 h2{
@@ -44,7 +44,12 @@ p{
 .nav {
 	font-size: 1em;
 	background-color: #2875AF;
-
+}
+button.success, .button.success {
+	background-color: #66b605;
+}
+button.success, .button.success:hover {
+	background-color: #58960c;
 }
 ul li a {
 	color: white;
@@ -114,4 +119,10 @@ button, .button {
 
 .gallery-item{
 	width: 8em;
+}
+
+
+#foot-button {
+	font-size: 1.6em;
+	
 }

@@ -3,6 +3,7 @@
             [ll4u.routes.home :refer [home-routes]]
             [ll4u.middleware :refer [load-middleware]]
             [ll4u.session-manager :as session-manager]
+            [ring.adapter.jetty :as ring]
             [noir.response :refer [redirect]]
             [noir.util.middleware :refer [app-handler]]
             [ring.middleware.defaults :refer [site-defaults]]
@@ -73,3 +74,11 @@
            ;; available formats:
            ;; :json :json-kw :yaml :yaml-kw :edn :yaml-in-html
            :formats [:json-kw :edn :transit-json]))
+
+
+
+ (defn -main [& args]
+   (let [port (Integer/parseInt (or (System/getenv "PORT") "8080"))]
+     (ring/run-jetty #'app {:port port :join? false})))
+
+

@@ -1,4 +1,4 @@
-(defproject ll4u "0.1.0-SNAPSHOT"
+(defproject ll4u "0.1.0"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :dependencies [[org.clojure/clojure "1.6.0"]
@@ -6,6 +6,7 @@
                  [ring-server "0.3.1"]
                  [selmer "0.7.7"]
                  [com.taoensso/timbre "3.3.1"]
+                 [ring/ring-jetty-adapter "1.3.2"]
                  ;[com.taoensso/tower "3.0.2"]
                  [markdown-clj "0.9.58"
                   :exclusions [com.keminglabs/cljx]]
@@ -23,6 +24,7 @@
          :init    ll4u.handler/init
          :destroy ll4u.handler/destroy
          :uberwar-name "ll4u.war"}
+  :main ll4u.handler
   :profiles
   {:uberjar {:omit-source true
              :env {:production true}

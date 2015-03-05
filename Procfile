@@ -1,1 +1,1 @@
-web: lein with-profile production trampoline ring server
+web: java $JVM_OPTS -jar target/ll4u.jar -m ll4u.handler
